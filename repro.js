@@ -35,8 +35,12 @@ async function run() {
 
   const page = await browser.newPage();
   const firstHash = await takeScreenshot(page);
+  console.log(`initial ${firstHash}`)
 
   for (let i = 0; i < 2; i++) {
+  await page.setContent(`
+    <div style="width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; background: white;" />
+  `);
     const hash = await takeScreenshot(page);
     console.log(`${hash}.png`);
   }
