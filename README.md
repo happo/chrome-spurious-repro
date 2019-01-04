@@ -53,3 +53,9 @@ Here's `65bfa89f8fd2c5206c249c5953a319f8.png`:
 Here's `eae8fa65c444be73981b0bbd838d73c2.png`:
 ![eae8fa65c444be73981b0bbd838d73c2.png](eae8fa65c444be73981b0bbd838d73c2.png)
 
+
+## Workaround
+
+I found that resetting the full screen to white in between renderings will
+force better behavior. See the `workaround` branch in this repo for a
+demonstration of that.
