@@ -30,13 +30,13 @@ async function takeScreenshot(page) {
 
 async function run() {
   const browser = await puppeteer.launch({
-    args: ['--no-sandbox', '--disable-setuid-sandbox', '--hide-scrollbars'],
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--hide-scrollbars', '--disable-partial-raster'],
   });
 
   const page = await browser.newPage();
   const firstHash = await takeScreenshot(page);
 
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 10; i++) {
     const hash = await takeScreenshot(page);
     console.log(`${hash}.png`);
   }
